@@ -1,6 +1,9 @@
 # CausalStarGANv2-VC
 このリポジトリでは, 低遅延リアルタイムAny-to-Many声質変換に使用するCausalStarGANv2-VCモデルの訓練を行うスクリプトを公開しています. StarGANv2-VC[^1]および当手法で使用するJDCNet[^2]の非公式実装を含みます. CNNConformerではConformer[^3], CausalHiFi-GANではHiFi-GAN[^4]を利用しています. 
 
+## 音声サンプル
+[CausalStarGANv2-VC demo](https://fss1t.github.io/)に置いています.
+
 ## 使用方法
 Python3.9以上で動作します.
 ### 1. datasetの配置
