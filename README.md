@@ -15,7 +15,8 @@ python dataset/main.py --path_jvs %path_jvs% --path_jvs_music %path_jvs_music%
 ```
 python CausalHiFiGAN/main.py
 python JDCNet/main.py
-python CNNConformer/main.py```
+python CNNConformer/main.py
+```
 
 ### 3. StarGANv2-VCの学習
 ```
