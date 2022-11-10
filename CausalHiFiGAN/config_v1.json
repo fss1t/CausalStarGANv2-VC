@@ -1,0 +1,41 @@
+{
+    "summary_interval":1,
+    "validation_interval":10000,
+    "checkpoint_interval":100000,
+    
+    "training_iterations":1000000,    
+    "batch_size": 16,
+    "batch_size_valid": 16,
+    "segment_size": 8192,
+    "segment_size_valid":131072,
+    "learning_rate": 0.0002,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "lr_decay": 0.9999987648151658,    
+    
+    "resblock": "1",
+    "pre_kernel_size":4,
+    "upsample_rates": [8,8,2,2],
+    "upsample_kernel_sizes": [16,16,4,4],
+    "upsample_initial_channel": 512,
+    "resblock_kernel_sizes": [3,7,11],
+    "resblock_dilation_sizes": [[1,3,5], [1,3,5], [1,3,5]],
+    "post_kernel_size":7,
+
+    "num_mels": 80,
+    "num_freq": 1025,
+    "n_fft": 1024,
+    "hop_size": 256,
+    "win_size": 1024,
+
+    "sampling_rate": 24000,
+
+    "fmin": 0,
+    "fmax": 8000,
+    "fmax_for_loss": null,
+
+    "seed": 1234,
+    "device":"cuda:0",
+    "num_workers": 4
+
+}
