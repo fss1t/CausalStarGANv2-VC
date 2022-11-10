@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 from get_wav_jvs import get_wav_jvs
 from get_lab_jvs import get_lab_jvs
+os.chdir(os.path.dirname(__file__))  # cd .
 
 
 def main():
