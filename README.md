@@ -1,6 +1,6 @@
 # CausalStarGANv2-VC
-このリポジトリでは, 低遅延リアルタイムAny-to-Many声質変換に使用するCausalStarGANv2-VCモデルの訓練を行うスクリプトを公開しています.
-公開に際して[JVS corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)および[JVS-MuSiC](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_music)をデータセットとして学習および推論を行うデモを公開しました.
+このリポジトリでは, 低遅延リアルタイムAny-to-Many声質変換に使用するCausalStarGANv2-VCモデルの訓練を行うスクリプトを公開しています. StarGANv2-VC[^1]および当手法で使用するJDCNet[^2]の非公式実装を含みます. CNNConformerではConformer[^3], CausalHiFi-GANではHiFi-GAN[^4]を利用しています. 
+
 ## 使用方法
 Python3.9以上で動作します.
 ### 1. datasetの配置
@@ -33,7 +33,8 @@ python CausalStarGANv2VC/main.py
 - CNNConformer/CNNConformer/models/cnn.py
 - JDCNet/JDCNet/models/jdcnet.py
 - StarGANv2VC/StarGANv2VC/models/*
-: https://github.com/yl4579/StarGANv2-VC
+
+  : https://github.com/yl4579/StarGANv2-VC
 
 [^1]: StarGANv2-VC<br>
   paper: https://arxiv.org/abs/2107.10394#<br>
@@ -43,6 +44,9 @@ python CausalStarGANv2VC/main.py
   paper: https://www.mdpi.com/2076-3417/9/7/1324<br>
   official implementation: https://github.com/keums/melodyExtraction_JDC
 
-[^3]: HiFi-GAN<br>
+[^3]: Conformer<br>
+  paper: https://arxiv.org/abs/2005.08100
+
+[^4]: HiFi-GAN<br>
   paper: https://arxiv.org/abs/2010.05646<br>
   official implementation: https://github.com/jik876/hifi-gan
