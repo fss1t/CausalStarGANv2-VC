@@ -1,24 +1,37 @@
 # CausalStarGANv2-VC
-このリポジトリは筆者が卒業研究で扱ったStarGANv2-VC[^1]および当手法で使用するJDCNet[^2]の**非公式**実装を含む就職活動用ポートフォリオである.
-公開に際して[JVS corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)および[JVS-MuSiC](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_music)をデータセットとして学習および推論を行うデモを公開した.
+このリポジトリでは, 低遅延リアルタイムAny-to-Many声質変換に使用するCausalStarGANv2-VCモデルの訓練を行うスクリプトを公開しています.
+公開に際して[JVS corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)および[JVS-MuSiC](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_music)をデータセットとして学習および推論を行うデモを公開しました.
 ## 使用方法
+Python3.9以上で動作します.
 ### 1. datasetの配置
 [JVS corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)および[JVS-MuSiC](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_music)からデータをコピーし, 再配置する.
 
+`%path_jvs%`に[JVS corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)のルートディレクトリ(jvs_ver1), `%path_jvs_corpus%`に[JVS-MuSiC](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_music)のパスを指定し, 以下を実行する. 
 ```
 python dataset/main.py --path_jvs %path_jvs% --path_jvs_music %path_jvs_music%
 ```
 
-### 2. CausalHiFiGANの学習
+### 2. CausalHiFi-GAN, JDCNet, CNNConformerの学習
+```
+python CausalHiFiGAN/main.py
+python JDCNet/main.py
+python CNNConformer/main.py```
 
+### 3. StarGANv2-VCの学習
+```
+python StarGANv2VC/main.py
+```
+### 4. CausalStarGANv2-VCの学習
+```
+python CausalStarGANv2VC/main.py
+```
 
 ## 参照
 
-- CNNConformer_ASR/common/conformer: https://github.com/sooftware/conformer
-- CNNConformer_ASR/common/conformer/cnn.py
-- JDCNet/common/model/jdcnet.py
-- StarGANv2VC/common/model/models.py
-- StarGANv2VC/train/tool/losses.py<br>
+- CNNConformer/CNNConformer/models/conformer: https://github.com/sooftware/conformer
+- CNNConformer/CNNConformer/models/cnn.py
+- JDCNet/JDCNet/models/jdcnet.py
+- StarGANv2VC/StarGANv2VC/models/*
 : https://github.com/yl4579/StarGANv2-VC
 
 [^1]: StarGANv2-VC<br>
