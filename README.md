@@ -5,7 +5,7 @@
 [CausalStarGANv2-VC Demo](https://fss1t.github.io/)に置いています.
 
 ## 使用方法
-Python3.9以上で動作します.
+Python3.9で動作します.
 ### 1. datasetの配置
 [JVS corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)および[JVS-MuSiC](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_music)からデータをコピーし, 再配置する.
 
