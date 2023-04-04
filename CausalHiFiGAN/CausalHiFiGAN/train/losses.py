@@ -22,5 +22,5 @@ def discriminator_loss(list_r_real, list_r_fake):
 def generator_loss(list_r):
     loss = 0
     for r in list_r:
-        loss = torch.mean((1 - r)**2)
+        loss += torch.mean((1 - r)**2)
     return loss
